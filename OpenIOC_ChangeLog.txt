@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+Major Changes:
+
+1. Restructured the XML. OpenIOC now has thee distinct sections
+
+--metadata
+    Description, creator, dates...
+
+--criteria
+    Everything that used to be <definition>
+
+--parameters
+    Additional section for providing arbitrary metadata on <Indicator> and <IndicatorItem> elements.
+    
+
+Removed IOCs requirement to respect Lucene behaviors.
+
+Added additional operators. Including the existing 'is' and 'contains', we now have the following:
+The following operators are expected to perform as they are described in XPath 2.0
+                String  Md5sum  IPAddr  Integer DateTime
+is              yes     yes     yes     yes     yes
+contains        yes     no      no      no      no
+matches         yes     no      yes     no      no
+starts-with     yes     no      no      no      no
+ends-with       yes     no      no      no      no
+greater-than    no      no      no      yes     yes
+less-than       no      no      no      yes     yes
+
+Moved operator negation out of the operator itself (isnot) to its own attribute IndicatorItem/@negate=true|false
+
+Added case sensitivity IndicatorItem/@preserve-case=true|false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AdminPage->ConfigFiles->Agent Controller->Optimizations->ignore_empty_documents: true
+
+
+this is how you query
+11:57 AM
+curl -k -u admin:mandiant "https://localhost/administration/configurator/?key0=agentcontroller/agent_controller/optimization/max_empty_document_size&key1=agentcontroller/agent_controller/optimization/ignore_empty_documents"
+11:58 AM
+this is how you modify
+11:58 AM
+curl -X POST -k -u admin:mandiant "https://localhost/administration/configurator/?agentcontroller/agent_controller/optimization/max_empty_document_size=2048&agentcontroller/agent_controller/optimization/ignore_empty_documents=True"
+11:58 AM
+so you can query multiple configuration values in one request, and you can set multiple configuration values in one PUT
+12:22 PM
+make sense?
+
+
+curl -k  "http://facebook.com"
