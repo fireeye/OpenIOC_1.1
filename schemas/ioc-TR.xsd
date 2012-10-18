@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.mandiant.com/2010/ioc/TR/" elementFormDefault="qualified" targetNamespace="http://schemas.mandiant.com/2010/ioc/TR/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="indicator" nillable="true" type="tns:IocTest" />
+  <xs:complexType name="IocTest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="param" type="tns:Parameter" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UniqueIdentity" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="operator" type="tns:IocOperator" use="required" />
+  </xs:complexType>
+  <xs:complexType name="Parameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="value" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="title" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="IocOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="and" />
+      <xs:enumeration value="or" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="param" type="tns:Parameter" />
+</xs:schema>
