@@ -5,7 +5,6 @@
 
 
 
-
 Major Changes:
 
 1. Restructured the XML. OpenIOC now has thee distinct sections
@@ -26,12 +25,12 @@ Added additional operators. Including the existing 'is' and 'contains', we now h
 The following operators are expected to perform as they are described in XPath 2.0
                 String  Md5sum  IPAddr  Integer DateTime
 is              yes     yes     yes     yes     yes
-contains        yes     no      no      no      no
-matches         yes     no      yes     no      no
-starts-with     yes     no      no      no      no
-ends-with       yes     no      no      no      no
-greater-than    no      no      no      yes     yes
-less-than       no      no      no      yes     yes
+contains        yes     
+matches         yes             yes     
+starts-with     yes     
+ends-with       yes     
+greater-than    no                      yes     yes
+less-than       no                      yes     yes
 
 Moved operator negation out of the operator itself (isnot) to its own attribute IndicatorItem/@negate=true|false
 
