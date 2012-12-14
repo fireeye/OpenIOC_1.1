@@ -24,7 +24,7 @@ A place to put stuff about OpenIOC 1.1
     is              yes     yes     yes     yes     yes
     contains        yes     no      no      no      no
     matches         yes     no      yes     no      no
-    begins-with     yes     no      no      no      no
+    starts-with     yes     no      no      no      no
     ends-with       yes     no      no      no      no
     greater-than    no      no      no      yes     yes
     less-than       no      no      no      yes     yes
