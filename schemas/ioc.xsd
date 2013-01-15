@@ -57,7 +57,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Content" type="tns:IndicatorItemContent" />
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" />
-    <xs:attribute name="condition" type="xs:string" />
+    <xs:attribute name="condition" type="tns:IndicatorItemCondition" use="required"/>
     <xs:attribute name="preserve-case" type="xs:boolean" use="required" />
     <xs:attribute name="negate" type="xs:boolean" use="required" />
   </xs:complexType>
@@ -73,6 +73,17 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:simpleType name="IndicatorItemCondition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="is" />
+      <xs:enumeration value="contains" />
+      <xs:enumeration value="matches" />
+      <xs:enumeration value="starts-with" />
+      <xs:enumeration value="ends-with" />
+      <xs:enumeration value="greater-than" />
+      <xs:enumeration value="less-than" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="IocOperator">
     <xs:restriction base="xs:string">
       <xs:enumeration value="OR" />
