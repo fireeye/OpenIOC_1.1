@@ -7,7 +7,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="criteria" type="tns:ArrayOfIocIndicator" />
       <xs:element minOccurs="0" maxOccurs="1" name="parameters" type="tns:ArrayOfIOCParameter" />
     </xs:sequence>
-    <xs:attribute name="id" type="xs:string" />
+    <xs:attribute name="id" type="xs:string" use="required" />
     <xs:attribute name="last-modified" type="xs:dateTime" use="required" />
     <xs:attribute name="published-date" type="xs:dateTime" use="required" />
   </xs:complexType>
@@ -49,14 +49,15 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Indicator" type="tns:IocIndicator" />
     </xs:sequence>
     <xs:attribute name="operator" type="tns:IocOperator" use="required" />
-    <xs:attribute name="id" type="xs:string" />
+    <xs:attribute name="id" type="xs:string" use:"required" />
+    <xs:attribute name="node-context" type="xs:string" />
   </xs:complexType>
   <xs:complexType name="IndicatorItem">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="Context" type="tns:IndicatorItemContext" />
       <xs:element minOccurs="0" maxOccurs="1" name="Content" type="tns:IndicatorItemContent" />
     </xs:sequence>
-    <xs:attribute name="id" type="xs:string" />
+    <xs:attribute name="id" type="xs:string" use:"required" />
     <xs:attribute name="condition" type="tns:IndicatorItemCondition" use="required"/>
     <xs:attribute name="preserve-case" type="xs:boolean" use="required" />
     <xs:attribute name="negate" type="xs:boolean" use="required" />
@@ -99,7 +100,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="value" type="tns:IndicatorItemContent" />
     </xs:sequence>
-    <xs:attribute name="id" type="xs:string" />
+    <xs:attribute name="id" type="xs:string" use:"required" />
+    <xs:attribute name="ref-id" type="xs:string" use:"required" />
     <xs:attribute name="name" type="xs:string" />
   </xs:complexType>
 </xs:schema>
