@@ -29,7 +29,7 @@
   <xs:complexType name="Link" mixed="true">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:Identity">
-        <xs:attribute name="rel" type="xs:string" />
+        <xs:attribute name="rel" type="xs:string" use="required"/>
         <xs:attribute name="title" type="xs:string" />
         <xs:attribute name="type" type="xs:string" />
       </xs:extension>
@@ -54,8 +54,8 @@
   </xs:complexType>
   <xs:complexType name="IndicatorItem">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="Context" type="tns:IndicatorItemContext" />
-      <xs:element minOccurs="0" maxOccurs="1" name="Content" type="tns:IndicatorItemContent" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Context" type="tns:IndicatorItemContext" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Content" type="tns:IndicatorItemContent" />
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required" />
     <xs:attribute name="condition" type="tns:IndicatorItemCondition" use="required"/>
@@ -102,6 +102,6 @@
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required" />
     <xs:attribute name="ref-id" type="xs:string" use="required" />
-    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="name" type="xs:string" use="required" />
   </xs:complexType>
 </xs:schema>

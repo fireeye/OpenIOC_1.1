@@ -20,14 +20,14 @@ A place to put stuff about OpenIOC 1.1
     they are described in XPath 2.0.
 
     ```
-                   String  Md5sum  IPAddr  Integer DateTime
-    is              yes     yes     yes     yes     yes
-    contains        yes     no      no      no      no
-    matches         yes     no      yes     no      no
-    starts-with     yes     no      no      no      no
-    ends-with       yes     no      no      no      no
-    greater-than    no      no      no      yes     yes
-    less-than       no      no      no      yes     yes
+                   String  Md5sum  IPAddr  Integer DateTime Bool  Float
+    is              yes     yes     yes     yes     yes      yes   yes
+    contains        yes     no      no      no      no       no    no
+    matches         yes     no      yes     no      no       no    no
+    starts-with     yes     no      no      no      no       no    no
+    ends-with       yes     no      no      no      no       no    no
+    greater-than    no      no      no      yes     yes      no    yes
+    less-than       no      no      no      yes     yes      no    yes
     ```
 
 1. Moved operator negation out of the operator itself (isnot) to its own
@@ -35,3 +35,4 @@ A place to put stuff about OpenIOC 1.1
 
 1. Added case sensitivity `IndicatorItem/@preserve-case=true|false`.
 
+1. Added node context `Indicator/@node-context=xs:string`, allowing us to define context around a Indicator.
