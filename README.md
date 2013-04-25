@@ -52,6 +52,6 @@ After this release, there was a request for a few additional modifications by st
 
 1. All attributes of parameters are required to keep blank/improper parameters from being created/retained.
 
-1. Parameters have a required attribute of `@ref-id` that will be used to show what element inside the IOC that they refer to -- this is what allows for the ability to provide metadata referenced above, even though the parameters are not inline with what they contain metadata about.
+1. Parameters now have two id attributes: `IOCParameter/@id` is a unique GUID to identify the parameter, and `IOCParameter/@ref-id` is used to show which element inside the IOC that specific parameter refers to.
 
 1. If you use a Link in the IOC metadata, the `rel` attribute is now required (i.e. there must actually be a link represented in the IOC xml, even if it is empty).
