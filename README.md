@@ -64,4 +64,6 @@ After this release, there was a request for a few additional modifications by st
     false           yes     yes     yes     yes     yes      yes   yes
     ```
 
-1.1 The case sensitivity a regular expression match, where `IndicatorItem/@condition='matches'`, should be determined by the `IndicatorItem/@preserve-case` term.
+1. The case sensitivity of a regular expression match, where `IndicatorItem/@condition='matches'`, should be determined by the `IndicatorItem/@preserve-case` term.
+
+1. By default, the `IndicatorItem/@preserve-case` attribute should be set to 'false' when creating a IndicatorItem.
