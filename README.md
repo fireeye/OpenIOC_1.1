@@ -55,3 +55,11 @@ After this release, there was a request for a few additional modifications by st
 1. Parameters now have two id attributes: `IOCParameter/@id` is a unique GUID to identify the parameter, and `IOCParameter/@ref-id` is used to show which element inside the IOC that specific parameter refers to.
 
 1. If you use a Link in the IOC metadata, the `rel` attribute is now required (i.e. there must actually be a link represented in the IOC xml, even if it is empty).
+
+1. The behavior of `IndicatorItem/@preserve-case` should only apply to strings.  The table below states whether or not the given preserve-case value (true or false) is acceptable for a given content type.
+
+    ```
+                   String  Md5sum  IPAddr  Integer DateTime Bool  Float
+    true            yes     no      no      no      no       no    no
+    false           yes     yes     yes     yes     yes      yes   yes
+    ```
