@@ -63,3 +63,5 @@ After this release, there was a request for a few additional modifications by st
     true            yes     no      no      no      no       no    no
     false           yes     yes     yes     yes     yes      yes   yes
     ```
+
+1.1 The case sensitivity a regular expression match, where `IndicatorItem/@condition='matches'`, should be determined by the `IndicatorItem/@preserve-case` term.
