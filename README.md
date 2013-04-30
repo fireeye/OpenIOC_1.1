@@ -1,4 +1,4 @@
-# OpenIOC 1.1
+# OpenIOC 1.1 -- DRAFT
 
 This repo is a place to put stuff about OpenIOC 1.1 (and ultimately future versions)
 
