@@ -3,8 +3,8 @@
   <xs:element name="OpenIOC" nillable="true" type="tns:IndicatorOfCompromise" />
   <xs:complexType name="IndicatorOfCompromise">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="metadata" type="tns:IOCMetadata" />
-      <xs:element minOccurs="0" maxOccurs="1" name="criteria" type="tns:ArrayOfIocIndicator" />
+      <xs:element minOccurs="1" maxOccurs="1" name="metadata" type="tns:IOCMetadata" />
+      <xs:element minOccurs="1" maxOccurs="1" name="criteria" type="tns:ArrayOfIocIndicator" />
       <xs:element minOccurs="0" maxOccurs="1" name="parameters" type="tns:ArrayOfIOCParameter" />
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" use="required" />
@@ -40,7 +40,7 @@
   </xs:complexType>
   <xs:complexType name="ArrayOfIocIndicator">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Indicator" nillable="true" type="tns:IocIndicator" />
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="Indicator" nillable="true" type="tns:IocIndicator" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="IocIndicator">
