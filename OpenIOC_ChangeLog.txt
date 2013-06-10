@@ -1,13 +1,6 @@
-
-
-
-
-
-
-
 Major Changes:
 
-1. Restructured the XML. OpenIOC now has thee distinct sections
+Restructured the XML. OpenIOC now has thee distinct sections
 
 --metadata
     Description, creator, dates...
@@ -38,3 +31,28 @@ Added case sensitivity IndicatorItem/@preserve-case=true|false
 
 Added node context to the Indicator/@node-context, allowing us to define document roots.
 
+### OpenIOC 1.1 v2 (addendums)
+
+Added node context `Indicator/@node-context=xs:string`, this will allow for future ability to specify node-context to allow matches that consist of sibling or parent/child nodes that did not evaluate together properly in 1.0.
+
+`IndicatorItem/@id` is now a required item. Previously it was not, allowing for Items to not have ids and still validate.
+
+`IndicatorItem/content` and `IndicatorItem/context` are now `minOccurs=1` -- this prevents items from existing without content or without context (this is important now that we allow you to specify context).
+
+All attributes of parameters are required to keep blank/improper parameters from being created/retained.
+
+Parameters now have two id attributes: `IOCParameter/@id` is a unique GUID to identify the parameter, and `IOCParameter/@ref-id` is used to show which element inside the IOC that specific parameter refers to.
+
+If you use a Link in the IOC metadata, the `rel` attribute is now required (i.e. there must actually be a link represented in the IOC xml, even if it is empty).
+
+The behavior of `IndicatorItem/@preserve-case` should only apply to strings.  The table below states whether or not the given preserve-case value (true or false) is acceptable for a given content type.
+
+    ```
+                   String  Md5sum  IPAddr  Integer DateTime Bool  Float
+    true            yes     no      no      no      no       no    no
+    false           yes     yes     yes     yes     yes      yes   yes
+    ```
+
+The case sensitivity of a regular expression match, where `IndicatorItem/@condition='matches'`, should be determined by the `IndicatorItem/@preserve-case` term.
+
+By default, the `IndicatorItem/@preserve-case` attribute should be set to 'false' when creating a IndicatorItem.
