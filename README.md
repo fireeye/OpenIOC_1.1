@@ -88,7 +88,7 @@ Criteria section.
 
 schemas/ioc.xsd - This is the XML schema document for OpenIOC 1.1.
 
-OpenIOC_Schema_Changelog.txt - This is a changelog for changes between
+OpenIOC_Schema_Changelog.md - This is a changelog for changes between
 		OpenIOC 1.0 and OpenIOC 1.1.
 
 iocterms/current.iocterms - This is a .iocterms file, containing a list of IOC
@@ -96,7 +96,7 @@ iocterms/current.iocterms - This is a .iocterms file, containing a list of IOC
 
 OpenIOC_Terms_Changelog.txt - This is a changlog for the current.iocterms file.
 
-IOC_Terms_Defs.txt - This document provides definitions and examples for what
+IOC_Terms_Defs.md - This document provides definitions and examples for what
 		some of the most commonly used IOC terms mean.
 
 
@@ -108,9 +108,9 @@ Title                   Filename
 =====                   ========
 OpenIOC 1.1 Schema      schemas/ioc.xsd
 .iocterms file          iocterms/current.iocterms
-Schema changelog        OpenIOC_Schema_Changelog.txt
+Schema changelog        OpenIOC_Schema_Changelog.md
 iocterms changelog      OpenIOC_Terms_Changelog.txt
-IOC Terms Definitions   IOC_Terms_Defs.txt
+IOC Terms Definitions   IOC_Terms_Defs.md
 
 
 
