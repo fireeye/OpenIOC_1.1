@@ -1,9 +1,11 @@
 # OpenIOC 1.1 -- DRAFT README
 
-Authors:
+## Authors:
 
 Tony Dell (tony d0t dell a t mandiant d0t com)
+
 William Gibb (william d0t gibb a t mandiant d0t com)
+
 Doug Wilson (douglas d0t wilson a t mandiant d0t com)
 
 ## License
