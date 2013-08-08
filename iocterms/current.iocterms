@@ -1,3 +1,9 @@
+<!--
+    TITLE:          current.iocterms
+    VERSION:        1.1 (draft)
+    LICENSE:        Copyright 2013 Mandiant Corporation.  Licensed under the Apache 2.0 license.  
+    DESCRIPTION:    Terms available for OpenIOC 1.1.  These can be used, out of the box, with IOCe.
+-->
 <ioctermlist xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" last-modified="2013-05-14T16:15:00Z">
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="ArpEntryItem/CacheType" title="ARP Cache Type" />
   <iocterm data-type="xs:string" display-type="IP" term-source="application/vnd.mandiant.mir" text="ArpEntryItem/IPv4Address" title="ARP IPv4 Address" />

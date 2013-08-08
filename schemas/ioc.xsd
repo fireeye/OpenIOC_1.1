@@ -1,4 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+    TITLE:          OpenIOC 1.1 Schema
+    VERSION:        1.1 (draft)
+    LICENSE:        Copyright 2013 Mandiant Corporation.  Licensed under the Apache 2.0 license.  
+    DESCRIPTION:    OpenIOC 1.1 Schema document, describing the structure of OpenIOC 1.1.
+-->
 <xs:schema xmlns:tns="http://openioc.org/schemas/OpenIOC_1.1" elementFormDefault="qualified" targetNamespace="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="OpenIOC" nillable="true" type="tns:IndicatorOfCompromise" />
   <xs:complexType name="IndicatorOfCompromise">
