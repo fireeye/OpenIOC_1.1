@@ -10,7 +10,8 @@ Doug Wilson (douglas d0t wilson a t mandiant d0t com)
 
 ## License
 
-!!!Insert Apache 2.0 License information here!!!!!
+The documents in this repository are made available under the terms of the
+Apache License , Version 2.0. See the "LICENSE " file for more information.
 
 ## Description
 
@@ -39,18 +40,18 @@ A quick rundown of some of the changes:
 
 An IOC under OpenIOC 1.1 has three distinct sections.
 
-	1. Metadata - the traditional metadata header that contains metadata about
-	   the entire Indicator
+    1. Metadata - the traditional metadata header that contains metadata about
+       the entire Indicator
 
-	2. Criteria - the "matching" section -- a boolean logical evaluation that
-	   determines whether or not you have found evil, as defined by this specific 
-	   indicator.
+    2. Criteria - the "matching" section -- a boolean logical evaluation that
+       determines whether or not you have found evil, as defined by this specific 
+       indicator.
 
-	3. Parameters - This section is entirely new, although it houses the "comments"
-	   from OpenIOC 1.0 among other things. Parameters are assignable metadata,
-	   that can be applied to any element in the Criteria section of the IOC. The
-	   significance of the Parameters section will be discussed later.
-	
+    3. Parameters - This section is entirely new, although it houses the "comments"
+       from OpenIOC 1.0 among other things. Parameters are assignable metadata,
+       that can be applied to any element in the Criteria section of the IOC. The
+       significance of the Parameters section will be discussed later.
+    
 We've moved away from unexpected behavior of operators that were due to OpenIOC 1.0
 respecting Lucene. OpenIOC is usually used to generate Xpath expressions to query
 data sources, so OpenIOC 1.1 operators behave as the would in Xpath 2.0. Please see the
@@ -93,26 +94,25 @@ needed for the Criteria section.
 schemas/ioc.xsd - This is the XML schema document for OpenIOC 1.1.
 
 OpenIOC_Schema_Changelog.md - This is a changelog for changes between
-		OpenIOC 1.0 and OpenIOC 1.1.
+        OpenIOC 1.0 and OpenIOC 1.1.
 
 iocterms/current.iocterms - This is a .iocterms file, containing a list of IOC
-		Terms. This file can that can be used in the Windows IOC editor, IOCe.
+        Terms. This file can that can be used in the Windows IOC editor, IOCe.
 
-OpenIOC_Terms_Changelog.txt - This is a changlog for the current.iocterms file.
+OpenIOC_Terms_Changelog.md - This is a changlog for the current.iocterms file.
 
 IOC_Terms_Defs.md - This document provides definitions and examples for what
-		some of the most commonly used IOC terms mean.
-
+        some of the most commonly used IOC terms mean.
 
 ## Files which are licensed under the Apache 2.0 License 
 
 (see the LICENSE file for more information):
-
-Title                   Filename
-=====                   ========
-OpenIOC 1.1 Schema      schemas/ioc.xsd
-.iocterms file          iocterms/current.iocterms
-Schema changelog        OpenIOC_Schema_Changelog.md
-iocterms changelog      OpenIOC_Terms_Changelog.txt
-IOC Terms Definitions   IOC_Terms_Defs.md
-
+    ```
+    Title                   Filename
+    =====                   ========
+    OpenIOC 1.1 Schema      schemas/ioc.xsd
+    Schema changelog        OpenIOC_Schema_Changelog.md
+    .iocterms file          iocterms/current.iocterms
+    iocterms changelog      OpenIOC_Terms_Changelog.txt
+    IOC Terms Definitions   IOC_Terms_Defs.md
+    ```
