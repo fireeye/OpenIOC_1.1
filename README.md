@@ -107,7 +107,7 @@ IOC_Terms_Defs.md - This document provides definitions and examples for what
 ## Files which are licensed under the Apache 2.0 License 
 
 (see the LICENSE file for more information):
-    ```
+
     Title                   Filename
     =====                   ========
     OpenIOC 1.1 Schema      schemas/ioc.xsd
@@ -115,4 +115,3 @@ IOC_Terms_Defs.md - This document provides definitions and examples for what
     .iocterms file          iocterms/current.iocterms
     iocterms changelog      OpenIOC_Terms_Changelog.txt
     IOC Terms Definitions   IOC_Terms_Defs.md
-    ```
