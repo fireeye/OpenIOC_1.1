@@ -1,69 +1,117 @@
-# OpenIOC 1.1 -- DRAFT
+# OpenIOC 1.1 DRAFT -- README
 
-This repo is a place to put stuff about OpenIOC 1.1 (and ultimately future versions)
+## Authors:
 
-We have recently released OpenIOC 1.1 internally to the IOC Stakeholders.
+Tony Dell (tony d0t dell a t mandiant d0t com)
 
-After this release, there was a request for a few additional modifications by stakeholders. We are posting both here, and will consolidate once we get affirmative responses from stakeholders.
+William Gibb (william d0t gibb a t mandiant d0t com)
 
-## Major Changes from IOC 1.0
+Doug Wilson (douglas d0t wilson a t mandiant d0t com)
 
-### OpenIOC 1.1 v1 (initial)
+## License
 
+The documents in this repository are made available under the terms of the
+Apache License , Version 2.0. See the "LICENSE " file for more information.
 
-1. Restructured the XML. OpenIOC now has thee distinct sections
+## Description
 
-    1. metadata: Description, creator, dates... Metadata that pertains to the entire IOC.
+This repository contains a revised schema, iocterms file, and other supporting
+documents which are the basis for a draft of a revised version of OpenIOC that we are
+calling OpenIOC 1.1.
 
-    1. criteria: Everything that used to be `<definition>`. This is the part of the IOC that performs the actual matching.
+The updated OpenIOC 1.1 schema and a changelog are included. That changelog
+details the changes in schema from OpenIOC 1.0. An updated set of iocterms
+are included, as well as definitions of what selected commonly used terms mean.
 
-    1. parameters: Additional section for providing arbitrary metadata on
-       <Indicator> and <IndicatorItem> elements.
+We are publishing this draft as a means of garnering public comment. If you are
+interested in commenting, please contact one of the authors, or join the OpenIOC
+google group at https://groups.google.com/forum/#!forum/openioc 
 
-1. Removed IOCs requirement to respect Lucene behaviors.
+A utility for working with OpenIOC 1.1 programmatically has been released at
+https://github.com/mandiant/ioc_writer - Please go to that URL for more info.
 
-1. Added additional operators. Including the existing 'is' and 'contains', we
-    now have the following: The following operators are expected to perform as
-    they are described in XPath 2.0. Also, OpenIOC now respects Bool & Float variables in IOC terms files.
+An experimental version of the IOC Editor has been created for working with
+OpenIOC 1.1. Please contact one of the authors if you are interested in
+obtaining a copy of this tool.
 
-    ```
-                   String  Md5sum  IPAddr  Integer DateTime Bool  Float
-    is              yes     yes     yes     yes     yes      yes   yes
-    contains        yes     no      no      no      no       no    no
-    matches         yes     no      yes     no      no       no    no
-    starts-with     yes     no      no      no      no       no    no
-    ends-with       yes     no      no      no      no       no    no
-    greater-than    no      no      no      yes     yes      no    yes
-    less-than       no      no      no      yes     yes      no    yes
-    ```
+## What's new in OpenIOC 1.1?
 
-1. Moved operator negation out of the operator itself (isnot) to its own
-    attribute `IndicatorItem/@negate=true|false`.
+A quick rundown of some of the changes:
 
-1. Added case sensitivity `IndicatorItem/@preserve-case=true|false`.
+An IOC under OpenIOC 1.1 has three distinct sections.
 
-### OpenIOC 1.1 v2 (addendums)
+    1. Metadata - the traditional metadata header that contains metadata about
+       the entire Indicator
 
-1. Added node context `Indicator/@node-context=xs:string`, this will allow for future ability to specify node-context to allow matches that consist of sibling or parent/child nodes that did not evaluate together properly in 1.0.
+    2. Criteria - the "matching" section -- a boolean logical evaluation that
+       determines whether or not you have found evil, as defined by this specific 
+       indicator.
 
-1. `IndicatorItem/@id` is now a required item. Previously it was not, allowing for Items to not have ids and still validate.
+    3. Parameters - This section is entirely new, although it houses the "comments"
+       from OpenIOC 1.0 among other things. Parameters are assignable metadata,
+       that can be applied to any element in the Criteria section of the IOC. The
+       significance of the Parameters section will be discussed later.
+    
+We've moved away from unexpected behavior of operators that were due to OpenIOC 1.0
+respecting Lucene. OpenIOC is usually used to generate Xpath expressions to query
+data sources, so OpenIOC 1.1 operators behave as the would in Xpath 2.0. Please see the
+changelog to see what operators we support.
 
-1. `IndicatorItem/content` and `IndicatorItem/context` are now `minOccurs=1` -- this prevents items from existing without content or without context (this is important now that we allow you to specify context).
+In respecting Xpath operators, OpenIOC now supports regular expressions with the
+"matches" operator. This feature is one that is still being heavily tested for
+potential pros and cons. Additionally, negation now works the way that most users
+will expect.
 
-1. All attributes of parameters are required to keep blank/improper parameters from being created/retained.
+## The Parameters Section
 
-1. Parameters now have two id attributes: `IOCParameter/@id` is a unique GUID to identify the parameter, and `IOCParameter/@ref-id` is used to show which element inside the IOC that specific parameter refers to.
+Parameters are metadata that can be assigned to any specific object within the
+Criteria of an IOC. This may not sound like much, but it allows for application
+specific logic or controls to be applied to an IOC, without muddying up the schema for
+the matching or needing to be interwoven with the criteria section.
 
-1. If you use a Link in the IOC metadata, the `rel` attribute is now required (i.e. there must actually be a link represented in the IOC xml, even if it is empty).
+We've had many requests to add in various features that may only be of interest to
+certain groups or industries, such as confidence scoring, release-to/data control
+markings, sequences, and other features. Trying to build all of these in and allow
+for all cases would create a schema bloated with features that are not fully fleshed
+out yet, and that not everyone needs.
 
-1. The behavior of `IndicatorItem/@preserve-case` should only apply to strings.  The table below states whether or not the given preserve-case value (true or false) is acceptable for a given content type.
+Parameters can be used to apply application or organization specific logic that can
+then be passed along with the IOC, or restricted inside of a sharing boundary as
+the creator sees fit.
 
-    ```
-                   String  Md5sum  IPAddr  Integer DateTime Bool  Float
-    true            yes     no      no      no      no       no    no
-    false           yes     yes     yes     yes     yes      yes   yes
-    ```
+With parameters, we are basically allowing folks to "roll their own" on some of the
+features they want that are not included yet. We envision this as a test-ground for
+new ideas and features -- and, if something seems to work well and be universally
+needed, we can then consider adopting it into schema. Some ideas will just work
+better living outside the matching/criteria section as parameters no matter what.
 
-1. The case sensitivity of a regular expression match, where `IndicatorItem/@condition='matches'`, should be determined by the `IndicatorItem/@preserve-case` term.
+We feel that this solution allows flexibility and customization for different
+organizational needs and workflows, while still providing for the standardization
+needed for the Criteria section.
 
-1. By default, the `IndicatorItem/@preserve-case` attribute should be set to 'false' when creating a IndicatorItem.
+## Per file descriptions
+
+schemas/ioc.xsd - This is the XML schema document for OpenIOC 1.1.
+
+OpenIOC_Schema_Changelog.md - This is a changelog for changes between
+        OpenIOC 1.0 and OpenIOC 1.1.
+
+iocterms/current.iocterms - This is a .iocterms file, containing a list of IOC
+        Terms. This file can that can be used in the Windows IOC editor, IOCe.
+
+OpenIOC_Terms_Changelog.md - This is a changlog for the current.iocterms file.
+
+IOC_Terms_Defs.md - This document provides definitions and examples for what
+        some of the most commonly used IOC terms mean.
+
+## Files which are licensed under the Apache 2.0 License 
+
+(see the LICENSE file for more information):
+
+    Title                   Filename
+    =====                   ========
+    OpenIOC 1.1 Schema      schemas/ioc.xsd
+    Schema changelog        OpenIOC_Schema_Changelog.md
+    .iocterms file          iocterms/current.iocterms
+    iocterms changelog      OpenIOC_Terms_Changelog.txt
+    IOC Terms Definitions   IOC_Terms_Defs.md
