@@ -1,4 +1,4 @@
-# OpenIOC 1.1 -- DRAFT README
+# OpenIOC 1.1 DRAFT -- README
 
 ## Authors:
 
@@ -15,7 +15,8 @@ Doug Wilson (douglas d0t wilson a t mandiant d0t com)
 ## Description
 
 This repository contains a revised schema, iocterms file, and other supporting
-documents which are a draft for the idea of a revised version of OpenIOC, OpenIOC 1.1.
+documents which are the basis for a draft of a revised version of OpenIOC that we are
+calling OpenIOC 1.1.
 
 The updated OpenIOC 1.1 schema and a changelog are included. That changelog
 details the changes in schema from OpenIOC 1.0. An updated set of iocterms
@@ -29,8 +30,8 @@ A utility for working with OpenIOC 1.1 programmatically has been released at
 https://github.com/mandiant/ioc_writer - Please go to that URL for more info.
 
 An experimental version of the IOC Editor has been created for working with
-OpenIOC 1.1. Please contact one of the authors to get a copy of this tool if it
-is something you are interested in obtaining.
+OpenIOC 1.1. Please contact one of the authors if you are interested in
+obtaining a copy of this tool.
 
 ## What's new in OpenIOC 1.1?
 
@@ -40,18 +41,20 @@ An IOC under OpenIOC 1.1 has three distinct sections.
 
 	1. Metadata - the traditional metadata header that contains metadata about
 	   the entire Indicator
+
 	2. Criteria - the "matching" section -- a boolean logical evaluation that
 	   determines whether or not you have found evil, as defined by this specific 
 	   indicator.
+
 	3. Parameters - This section is entirely new, although it houses the "comments"
 	   from OpenIOC 1.0 among other things. Parameters are assignable metadata,
 	   that can be applied to any element in the Criteria section of the IOC. The
 	   significance of the Parameters section will be discussed later.
 	
-We've moved away from unexpected behavior of operators due to OpenIOC 1.0 respecting
-Lucene (a requirement for the MIR Product, originally). OpenIOC is usually used to
-generate Xpath expressions to query data sources, so OpenIOC 1.1 operators behave as
-the would in Xpath. Please see the changelog to see what operators we support.
+We've moved away from unexpected behavior of operators that were due to OpenIOC 1.0
+respecting Lucene. OpenIOC is usually used to generate Xpath expressions to query
+data sources, so OpenIOC 1.1 operators behave as the would in Xpath 2.0. Please see the
+changelog to see what operators we support.
 
 In respecting Xpath operators, OpenIOC now supports regular expressions with the
 "matches" operator. This feature is one that is still being heavily tested for
@@ -61,7 +64,7 @@ will expect.
 ## The Parameters Section
 
 Parameters are metadata that can be assigned to any specific object within the
-Criteria of an IOC. This may not sound like much, but what it allows is for application
+Criteria of an IOC. This may not sound like much, but it allows for application
 specific logic or controls to be applied to an IOC, without muddying up the schema for
 the matching or needing to be interwoven with the criteria section.
 
@@ -80,9 +83,10 @@ features they want that are not included yet. We envision this as a test-ground 
 new ideas and features -- and, if something seems to work well and be universally
 needed, we can then consider adopting it into schema. Some ideas will just work
 better living outside the matching/criteria section as parameters no matter what.
-This solution allows flexibility and customization for different organizational
-needs and workflows, while still providing for the standardization needed for the
-Criteria section.
+
+We feel that this solution allows flexibility and customization for different
+organizational needs and workflows, while still providing for the standardization
+needed for the Criteria section.
 
 ## Per file descriptions
 
@@ -111,9 +115,4 @@ OpenIOC 1.1 Schema      schemas/ioc.xsd
 Schema changelog        OpenIOC_Schema_Changelog.md
 iocterms changelog      OpenIOC_Terms_Changelog.txt
 IOC Terms Definitions   IOC_Terms_Defs.md
-
-
-
-
-
 
