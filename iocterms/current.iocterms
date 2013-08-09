@@ -233,7 +233,7 @@
   <iocterm data-type="xs:string" display-type="float" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/Sections/Section/Entropy/CurveData/float" title="File PEInfo Sections Section Entropy CurveData float" />
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/Sections/Section/Name" title="File Section Name" />
   <iocterm data-type="xs:int" display-type="int" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/Sections/Section/SizeInBytes" title="File PE Section Size" />
-  <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/Sections/Section/Type" title="File PE Secction Type" />
+  <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/Sections/Section/Type" title="File PE Section Type" />
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/Subsystem" title="File PE Subsystem" />
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/Type" title="File PE Type" />
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="FileItem/PEInfo/VersionInfoList/VersionInfoItem/Comments" title="File PEInfo Version Info Comments" />
@@ -353,7 +353,7 @@
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="ProcessItem/PortList/PortItem/state" title="Process State" />
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="ProcessItem/SectionList/MemorySection/DigitalSignature/CertificateIssuer" title="Process Section Certificate Issuer" />
   <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="ProcessItem/SectionList/MemorySection/DigitalSignature/CertificateSubject" title="Process Section Certificate Subject" />
-  <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="ProcessItem/SectionList/MemorySection/DigitalSignature/Description" title="Process Secction Signature Description" />
+  <iocterm data-type="xs:string" display-type="string" term-source="application/vnd.mandiant.mir" text="ProcessItem/SectionList/MemorySection/DigitalSignature/Description" title="Process Section Signature Description" />
   <iocterm data-type="xs:string" display-type="bool" term-source="application/vnd.mandiant.mir" text="ProcessItem/SectionList/MemorySection/DigitalSignature/SignatureExists" title="Process Section Signature Exists" />
   <iocterm data-type="xs:string" display-type="bool" term-source="application/vnd.mandiant.mir" text="ProcessItem/SectionList/MemorySection/DigitalSignature/SignatureVerified" title="Process Section Signature Verified" />
   <iocterm data-type="xs:string" display-type="bool" term-source="application/vnd.mandiant.mir" text="ProcessItem/SectionList/MemorySection/Injected" title="Process Section Injected" />
