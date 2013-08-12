@@ -2,6 +2,9 @@
 
 ## Authors:
 
+Copyright 2013 Mandiant Corporation.  Licensed under the Apache 2.0
+license.  Developed for Mandiant by:
+
 Tony Dell (tony d0t dell a t mandiant d0t com)
 
 William Gibb (william d0t gibb a t mandiant d0t com)
