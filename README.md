@@ -5,11 +5,15 @@
 Copyright 2013 Mandiant Corporation.  Licensed under the Apache 2.0
 license.  Developed for Mandiant by:
 
-Tony Dell (tony d0t dell a t mandiant d0t com)
 
-William Gibb (william d0t gibb a t mandiant d0t com)
+David Ross
+Jason Shiffer
+Tony Dell
+William Gibb
+Doug Wilson
 
-Doug Wilson (douglas d0t wilson a t mandiant d0t com)
+correspondence for the authors may be sent to openioc A T mandiant D O T com
+
 
 ## License
 
