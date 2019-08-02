@@ -72,3 +72,7 @@ permissions and limitations under the License.
 1. All attributes of parameters are required to keep blank/improper parameters from being created/retained.
 
 1. If you use a Link in the IOC metadata, the `rel` attribute is now required (i.e. there must actually be a link represented in the IOC xml, even if it is empty).
+
+2019-08-02  Matthew Dunwoody  <matthew d0t dunwoody a t mandiant d0t com>
+
+1. Added "platform" field, which contains a comma-delimited list of relevant/supported operating systems, e.g. "win,osx,linux".
