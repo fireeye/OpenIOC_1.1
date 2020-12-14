@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioctermlist xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" last-modified="2020-11-06T21:44:13Z">
+  <iocterm text="dnsLookupEvent/hostname" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="DNS Lookup Event Hostname [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="dnsLookupEvent/pid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="DNS Lookup Event Process ID [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="dnsLookupEvent/process" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="DNS Lookup Event Process Name [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="dnsLookupEvent/processPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="DNS Lookup Event Process Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="dnsLookupEvent/username" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="DNS Lookup Event Username [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/fullPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event Full Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/filePath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event File Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/drive" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event Drive [Win]" platform="win"/>
+  <iocterm text="imageLoadEvent/fileName" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event Filename [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/fileExtension" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event File Extension [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/devicePath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event DevicePath [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/pid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="Image Load Event Process ID [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/username" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event Username [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/parentPid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="Image Load Event Parent Pid [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/process" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event Process Name [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="imageLoadEvent/processPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Image Load Event Process Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="processEvent/eventType" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event Type" platform="win,osx,linux"/>
+  <iocterm text="processEvent/pid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="Process Event PID" platform="win,osx,linux"/>
+  <iocterm text="processEvent/processPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event Path" platform="win,osx,linux"/>
+  <iocterm text="processEvent/process" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event Name" platform="win,osx,linux"/>
+  <iocterm text="processEvent/parentPid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="Process Event Parent Process PID" platform="win,osx,linux"/>
+  <iocterm text="processEvent/parentProcessPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event Parent Path" platform="win,osx,linux"/>
+  <iocterm text="processEvent/parentProcess" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event Parent Process Name" platform="win,osx,linux"/>
+  <iocterm text="processEvent/username" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event Username" platform="win,osx,linux"/>
+  <iocterm text="processEvent/startTime" display-type="date" data-type="xs:dateTime" term-source="application/vnd.mandiant.event" title="Process Event Start Time" platform="win,osx,linux"/>
+  <iocterm text="processEvent/md5" display-type="md5" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event MD5" platform="win,osx,linux"/>
+  <iocterm text="processEvent/processCmdLine" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Process Event Command Line" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/remoteIP" display-type="IP" data-type="xs:string" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Remote IP" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/remotePort" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Remote Port" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/localIP" display-type="IP" data-type="xs:string" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Local IP" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/localPort" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Local Port" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/protocol" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Protocol" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/pid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Process ID" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/process" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Process Name" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/processPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Process Path" platform="win,osx,linux"/>
+  <iocterm text="ipv4NetworkEvent/username" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="IPv4 Network Connection Event Username" platform="win,osx,linux"/>
+  <iocterm text="fileWriteEvent/fullPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Full Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/filePath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event File Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/drive" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Drive [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/fileName" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event File Name [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/fileExtension" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Extension [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/devicePath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Device Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/pid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="File Write Event Process ID [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/process" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Process Name [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/processPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Process Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/writes" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="File Write Event Number of Writes [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/numBytesSeenWritten" display-type="double" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Number of Bytes Seen Written [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/lowestFileOffsetSeen" display-type="uint64" data-type="xs:uint64" term-source="application/vnd.mandiant.event" title="File Write Event Lowest Write Offset [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/dataAtLowestOffset" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Data at Lowest Offset (Base64) [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/textAtLowestOffset" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Text at Lowest Offset [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/closed" display-type="bool" data-type="xs:boolean" term-source="application/vnd.mandiant.event" title="File Write Event Closed [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/size" display-type="double" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Size on Disk [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/md5" display-type="md5" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event MD5 [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/username" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Event Username [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="fileWriteEvent/parentProcessPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Parent Process Path [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/parentPid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="File Write Parent Pid [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/openTime" display-type="date" data-type="xs:dateTime" term-source="application/vnd.mandiant.event" title="File Write Open Time [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/openDuration" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Open Duration [Win]" platform="win"/>
+  <iocterm text="fileWriteEvent/eventReason" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="File Write Reason [Win]" platform="win"/>
+  <iocterm text="urlMonitorEvent/hostname" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event Hostname [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/requestUrl" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event Url [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/urlMethod" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event Method [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/userAgent" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event User Agent [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/httpHeader" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event HTTP Header [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/remoteIpAddress" display-type="IP" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event Remote IP Address [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/remotePort" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="URL Request Event Remote Port [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/localPort" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="URL Request Event Local Port [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/pid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="URL Request Event PID [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/process" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event Process [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/processPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event Process Path [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="urlMonitorEvent/username" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="URL Request Event Username [Win] [OSX]" platform="win,osx"/>
+  <iocterm text="regKeyEvent/hive" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Hive [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/keyPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event KeyPath [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/path" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Path [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/originalPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Original Path [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/eventType" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="Registry Event Event Type [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/pid" display-type="int" data-type="xs:int" term-source="application/vnd.mandiant.event" title="Registry Event Process ID [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/process" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Process Name [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/processPath" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Process Path [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/valueName" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event ValueName [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/valueType" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Type [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/value" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Value (Base64) [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/text" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Text [Win]" platform="win"/>
+  <iocterm text="regKeyEvent/username" display-type="string" data-type="xs:string" term-source="application/vnd.mandiant.event" title="Registry Event Username [Win]" platform="win"/>
+  <iocterm text="addressNotificationEvent/address" display-type="IP" data-type="xs:string" term-source="application/vnd.mandiant.event" title="IP Address Change Event IP [Win] [OSX]" platform="win,osx"/>
+</ioctermlist>
