@@ -28,6 +28,7 @@
     <xs:attribute name="id" type="xs:string" use="required" />
     <xs:attribute name="last-modified" type="xs:dateTime" use="required" />
     <xs:attribute name="published-date" type="xs:dateTime" use="required" />
+    <xs:attribute name="version" type="xs:string" />
   </xs:complexType>
   <xs:complexType name="IOCMetadata">
     <xs:sequence>
